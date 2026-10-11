@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pages.vt3d.fi</title>
+<style>
+  :root { --bg: #f7f6f3; --fg: #1c1c1a; --muted: #6b6a66; --line: #e2dfd8; --code: #e8e6e0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #17181b; --fg: #eceae5; --muted: #9a988f; --line: #2e3034; --code: #26282c; }
+  }
+  body { margin: 0; padding: 48px 16px; font: 17px/1.6 system-ui, sans-serif;
+         background: var(--bg); color: var(--fg); }
+  main { max-width: 640px; margin: 0 auto; }
+  code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; }
+  p.pieni { color: var(--muted); font-size: 0.9em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tämän sivun jakaa Cloudflare Pages.</h1>
+  <p>Sivu on GitHub-repossa. Jokainen <code>git push</code> julkaisee uuden version automaattisesti Cloudflaren verkkoon.</p>
+
+  <table>
+    <tr><th></th><th><a href="http://tf.vt3d.fi">tf.vt3d.fi</a> (vko 2)</th><th>pages.vt3d.fi (vko 3)</th></tr>
+    <tr><td>Missä</td><td>oma VPS, Lempäälä</td><td>Cloudflaren CDN, lähin konesali</td></tr>
+    <tr><td>HTTPS</td><td>ei</td><td>kyllä, automaattisesti</td></tr>
+    <tr><td>Ylläpito</td><td>päivitykset, SSH, palomuuri, Docker</td><td>ei palvelinta</td></tr>
+    <tr><td>Julkaisu</td><td><code>terraform apply</code></td><td><code>git push</code></td></tr>
+    <tr><td>Palvelinpuolen koodi</td><td>mikä tahansa kontissa</td><td>vain Pages Functions (JavaScript, aikarajat)</td></tr>
+  </table>
+
+  <p class="pieni">Cloud Services, Oamk, viikko 3</p>
+</main>
+</body>
+</html>
